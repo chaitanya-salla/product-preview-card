@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-Dark-cyan: hsl(157, 76%, 10%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  background-color: var(--Cream);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  background-color: var(--White);
+  width: 20rem;
+  height: 40rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  font-family: "Montserrat", sans-serif;
+  margin: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  padding: 2rem;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: small;
+  letter-spacing: 0.5rem;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+}
+
+p {
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+span:nth-child(1) {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: var(--Dark-cyan);
+}
+
+span:nth-child(2) {
+  text-decoration: line-through;
+  margin-inline: 1.5rem;
+  color: var(--Dark-grayish-blue);
+  align-self: center;
+}
+
+.price {
+  margin-bottom: 1rem;
+  display: flex;
+}
+button {
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-size: larger;
+  padding: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--Very-Dark-cyan);
+}
+
+@media (width > 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto ;
+    width: 35rem;
+    height: 29rem;
+    margin: 3rem;
+    border-radius: 0.5rem;
+  }
+
+  img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+}
